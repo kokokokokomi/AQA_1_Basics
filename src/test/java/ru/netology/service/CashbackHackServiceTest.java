@@ -7,7 +7,7 @@ public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
 
     @Test
-    void shouldAdviseToBuyMore() {
+    public void shouldAdviseToBuyMore() {
         int amount = 900;
 
         int actual = service.remain(amount);
@@ -16,7 +16,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldNotAdviseToBuyMore() {
+    public void shouldNotAdviseToBuyMore() {
         int amount = 1000;
 
         int actual = service.remain(amount);
