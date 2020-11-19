@@ -17,6 +17,15 @@ public class CashbackHackServiceJUnit5Test {
     }
 
     @Test
+    public void shouldAdviseToBuyMoreIfMoreThanThousand() {
+        int amount = 1500;
+
+        int actual = service.remain(amount);
+        int expected = 500;
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldNotAdviseToBuyMore() {
         int amount = 1000;
 
